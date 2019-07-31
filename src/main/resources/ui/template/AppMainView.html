@@ -1,0 +1,41 @@
+<vaadin-horizontal-layout spacing="false" responsive size-full >
+	<vaadin-css-layout _id="mainMenuCssLayout" id="mainMenuCssLayout" width="200px" height-full>
+		<vaadin-css-layout _id="mainMenuBarCssLayout" id="mainMenuBarCssLayout" size-full>
+		     
+		    <vaadin-label _id="mainMenuBarLogoLabel" id="mainMenuBarLogoLabel" style-name="logo" plain-text :middle :center>
+       		
+     		</vaadin-label>
+		     <vaadin-label _id="mainMenuBarVersion" id="mainMenuBarVersion" plain-text width-full :middle :center>
+		        V 0.01 ( Alpha ) 
+		     </vaadin-label>
+     		
+		     <vaadin-label style-name="activeViewName" plain-text _id="activeViewName" visible="false">
+		       Active view 
+		     </vaadin-label>
+      
+	      <vaadin-button icon="fonticon://Vaadin-Icons/e68d" style-name="borderless" id="menuItemReportButton" _id="menuItemReportButton" width-full plain-text >
+	        REPORT 報表
+	      </vaadin-button>	      
+	      <vaadin-button icon="fonticon://Vaadin-Icons/e63e" style-name="borderless" id="menuItemPaperlessButton" _id="menuItemPaperlessButton" width-full plain-text >
+	        PAPERLESS
+	      </vaadin-button>
+	      <vaadin-button icon="fonticon://Vaadin-Icons/e747" style-name="borderless" id="menuItemUsersButton" _id="menuItemUsersButton" width-full plain-text >
+	        USERS 
+	      </vaadin-button>
+	      <vaadin-button icon="fonticon://Vaadin-Icons/e697" style-name="borderless" id="menuItemTestingButton" _id="menuItemTestingButton" width-full plain-text >
+	        TESTING
+	      </vaadin-button>
+	      <vaadin-button icon="fonticon://Vaadin-Icons/e7d3" style-name="borderless" id="menuItemConfigButton" _id="menuItemConfigButton" width-full plain-text >	        
+	        CONFIGURATION
+	      </vaadin-button>	      
+	      <vaadin-button icon="fonticon://Vaadin-Icons/e798" style-name="borderless" id="menuItemLogoutButton" _id="menuItemLogoutButton" width-full height="80px" plain-text >
+	        LOGOUT
+	      </vaadin-button>
+	      
+		          		
+		</vaadin-css-layout>
+    </vaadin-css-layout>
+    <vaadin-vertical-layout _id="mainContentVerticalLayout" id="mainContentVerticalLayout" size-full margin="false" spacing="false" :expand >
+    </vaadin-vertical-layout>
+</vaadin-horizontal-layout>
+

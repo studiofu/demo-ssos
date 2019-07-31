@@ -1,0 +1,29 @@
+<!-- :middle :center -->
+<vaadin-css-layout _id="landingRootLayout" id="landingRootLayout" responsive size-full margin="false" spacing="false">
+
+   <vaadin-panel style-name="borderless" _id="landingSearchPanel" id="landingSearchPanel">
+   
+    <vaadin-horizontal-layout spacing="false" width-full margin-left margin-right margin-top margin-bottom>
+    
+    <!--  style-name="list-filters" -->
+    
+     <vaadin-css-layout  id="landingSearchCssLayout" width-full :expand>
+      <vaadin-text-field _id="landingSearchField" id="landingSearchField" placeholder="Search"></vaadin-text-field>
+      <vaadin-button icon="fonticon://Vaadin-Icons/e805" id="landingSearchButton" _id="landingSearchButton" plain-text></vaadin-button>
+      <vaadin-check-box caption="Search Content" style-name="small" _id="landingSearchIncludeContent"></vaadin-check-box>
+     </vaadin-css-layout>
+     
+     <vaadin-button icon="fonticon://Vaadin-Icons/e801" style-name="primary small" id="newOrder" plain-text _id="landingSearchTestButton">
+       Test Button
+     </vaadin-button>
+     
+    </vaadin-horizontal-layout>
+    
+   </vaadin-panel>
+
+	<vaadin-panel style-name="borderless" _id="landingContentPanel" id="landingContentPanel" >
+		<vaadin-label plain-text _id="landingMainLabel" id="landingMainLabel" :middle :center visible="false">
+			Landing Page
+		</vaadin-label>	 	
+	</vaadin-panel>
+</vaadin-css-layout> 

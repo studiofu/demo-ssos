@@ -1,0 +1,435 @@
+@import "../valo/valo.scss";
+
+
+@mixin lc-purple-button-template {
+  	@include linear-gradient(to bottom,rgba(255,255,255,0.2) 2%, rgba(0,0,0,0.1) 98%);
+	width:100%;
+	margin-top: 37px;
+	height: 37px;
+	background-color: #4b4b65;
+	border: 1px solid #666;
+	border-radius: 4px;	
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.2), 0 2px 3px rgba(0, 0, 0, 0.05);
+	outline: none;
+	cursor: pointer;
+	color: #fff;
+	text-align: center;
+	position: relative;
+	font: inherit;
+	font-weight: 600;	
+}
+
+@mixin colored {
+  @include valo;
+  
+  $v-relative-paths: false;
+  
+  ///VAADIN/themes/valo/fonts/open-sans/OpenSans-Light-webfont
+  //@include font-face("Open Sans", 'fonts/open-sans/OpenSans-Light-webfont');
+
+
+    //background-color: #DDD;
+    //background-image: url(/VAADIN/common/images/5.jpg);
+    //background: linear-gradient(145deg, #484962 30%, #d06b41 100%);
+    //background-image: linear-gradient(145deg, #484962 30%, #d06b41 100%);
+    //font: 100 16px/1.55 "Open Sans", sans-serif;    
+  
+  .v-app{
+	  	@include linear-gradient(145deg, #484962 30%, #d06b41 100%);
+   }
+    
+   
+  
+  .lc-login-app {  
+  	@include linear-gradient(to bottom,rgba(255,255,255,0.2) 2%, rgba(0,0,0,0.1) 98%);
+	width:100%;
+	margin-top: 37px;
+	height: 37px;
+	background-color: #4b4b65;
+	border: 1px solid #666;
+	border-radius: 4px;	
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.2), 0 2px 3px rgba(0, 0, 0, 0.05);
+	outline: none;
+	cursor: pointer;
+	color: #fff;
+	text-align: center;
+	position: relative;
+	font: inherit;
+	font-weight: 600;
+  }
+  
+  .app-border1 {
+    border: 3px solid #73AD21;
+  }
+  
+  .app-border2 {
+    border: 3px solid #ffAD21;
+  }  
+  
+  .app-border3 {
+    border: 3px solid #73ADff;
+  }    
+  
+  .lc-app-center {
+  	margin: auto;
+  	vertical-align: middle;
+  	text-align: center;
+  	border: 3px solid #73ADff;
+  }
+  
+  @media (max-width: 1001px) {
+  	#loginRoot {
+  		//display: none;
+  	}  	
+  }
+  
+  // **************************************************************************
+  // global settings
+  // **************************************************************************  
+  
+		//$v-font-size: 12px;
+		
+		//$v-unit-size: 26px;
+		//$v-unit-size--small: 20px;
+		//$v-unit-size--tiny: 18px;
+		
+		//$v-layout-margin-top: 18px;
+		//$v-layout-margin-right: 18px;
+		//$v-layout-margin-bottom: 18px;
+		//$v-layout-margin-left: 18px;
+		//$v-layout-spacing-vertical: 7px;
+		//$v-layout-spacing-horizontal: 6px;
+		
+  // **************************************************************************
+  // app main view 
+  // **************************************************************************
+  
+		
+  // **************************************************************************
+  // app main view 
+  // **************************************************************************
+		
+  	#mainMenuVerticalLayout {
+  		//border: 3px solid #ffADff;
+  	}
+
+	#mainContentVerticalLayout {
+		//border: 3px solid #73ffff;
+	}
+	
+   	#loginMainLayout {
+   		//border: 3px solid #73ADff;		
+   	}			    
+  
+  // **************************************************************************
+  // login page
+  // **************************************************************************
+  	  
+	#loginFormLoginTextField,
+	#loginFormPasswordPasswordField {
+		width: 100%;
+		
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-ms-appearance: none;
+		-o-appearance: none;
+		appearance: none;
+		
+		font: inherit;
+		font-size: 14px;
+		
+		height: 37px;
+		border-radius: 4px;
+		padding: 4px 9px;
+		border: 1px solid rgba(0,0,0,.2);
+	}  	
+  	
+  	#loginMainLayout {
+  		@include valo-animate-in-slide-down(400ms, 0ms);
+  		
+  		// reference
+  		//@include valo-animate-in-slide-right(400ms, 0ms);  		
+  		//@include valo-animate-out-fade(2500ms, 1000ms);
+  		//@include animation(valo-animate-out-fade 2500ms 500ms forwards);
+  		//@include animation(valo-animate-out-fade 2500ms 500ms forwards);  		
+  	}
+
+	#loginMainLayout .v-spacing {
+		//width: 0 px;
+		//height: 0 px;
+	}
+	  	  
+  	//*, *:before, *:after {
+    //  box-sizing: border-box;
+    //}
+  
+	#loginInfoLayout {
+		color: #fff;
+		text-align: center;
+		padding: 28px;
+	}	  
+   
+	#loginFormLayout {
+		height: 100%;
+		//display: flex;
+		background-color: #fff;
+		justify-content: center;
+	}	   
+	
+	#loginLogoLabel {
+		display: inline-block;
+		width: 60px;
+		height: 60px;
+		border-radius: 100%;
+		background-image: url(VAADIN/themes/apptheme/icon-96.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-color: rgba(255,255,255,0.2);
+		box-shadow: 3px 3px 8px rgba(0,0,0,.2);
+	}	
+	
+	#loginTitleLabel {
+		font-size: 48px;
+		font-weight: 200;
+	}
+	
+	#loginInformationLabel {
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+		//font-size: 12px;		
+	}
+	
+	#loginFormLoginLabel, #loginFormPasswordLabel {
+		font-size: 16px;
+		padding: 16px 0 5px 0;
+		display: inline-block; 	
+	}
+	
+	#loginFormLayout .v-button {
+		@include lc-purple-button-template;
+	}	
+	
+   @media (max-width: 1px) {
+   
+    #loginMainLayout {
+    	width: 100%;
+    }
+    
+   	#loginInfoLayout {
+   		//width: 80%;
+   		//display: none;
+   	}
+   	
+   	#loginFormLayout {
+   		//width: 20%;
+   		height:100%;
+   	}
+   	
+   }
+   
+   // when the screen size is larger or equal than 801px
+   @media (min-width: 2px) {
+   	
+   	#loginMainLayout {
+		align-items: center;
+		justify-content: center;
+	}
+    
+	#loginLogoLabel {		
+		width: 96px;
+		height: 96px;
+	}	
+	
+	#loginInfoLayout, #loginFormLayout {
+		height: 450px;
+		box-shadow: 0 2px 3px rgba(0,0,0,.2);
+	}
+	
+	#loginInfoLayout {
+		background-color: rgba(255,255,255,.2);
+		width: 465px;
+		border-radius: 5px 0 0 5px;
+	}
+	
+	#loginFormLayout {
+		width: 320px;
+		padding: 28px;
+		border-radius: 0 5px 5px 0;		
+	}		
+	
+   }
+   
+   #authenticationRootLayout {
+   	display: flex;
+   	//flex-wrap: wrap;
+   	//display: block;
+	align-items: center;
+	justify-content: center;   	
+   }
+   
+   
+	.col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 25%;}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}   
+	
+	.ml12 {
+	  font-weight: 300;
+	  font-size: 1.8em;
+	  
+	  text-transform: uppercase;
+	  letter-spacing: 0.1em;	
+	  opacity: 1;
+	}
+	
+	.ml12 .letter {
+	  color: #ffffff;
+	  display: inline-block;
+	  line-height: 1em;
+	}
+	
+		  
+	#mainMenuBarCssLayout {
+		border-top: 1px solid #5a5a79;
+		border-bottom: 1px solid #5a5a79;
+		//background: #424259;
+		text-align: center;		
+	}
+	
+	#mainMenuBarLogoLabel {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		
+		display: inline-block;
+		width: 60px;
+		height: 60px;
+		border-radius: 20%;
+		background-image: url(VAADIN/themes/apptheme/icon-96.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-color: rgba(255,255,255,0.2);
+		box-shadow: 3px 3px 8px rgba(0,0,0,.2);	
+	}
+	
+	#mainMenuBarVersion {
+		color: #cccccc;
+		font-size: 10px;
+		font-weight: 400;
+		text-align: center;
+	}
+			  
+	#mainMenuBarCssLayout .v-icon {
+		color: #8888a7;
+	}	  	
+	
+	#mainMenuBarCssLayout .v-button {
+		text-align: left;
+		//font-size: $v-font-size;
+		font-size: 14px;
+		font-weight: 400;
+		text-overflow: ellipsis;
+		color: #b4b4c8;
+	}	
+	
+	#mainMenuBarCssLayout .selected {
+		background: rgba(0, 0, 0, 0.2);
+		color: #efeff3;
+	}	
+	
+	#mainMenuBarCssLayout .v-button.borderless:hover {
+		background: #3c3c51;
+	}		
+	
+	#mainMenuBarCssLayout .v-button.active, #mainMenuBarCssLayout .v-button:focus,
+	#mainMenuBarCssLayout .v-button::-moz-focus-inner {
+		color: white;
+	}
+			  	
+	#mainMenuBarCssLayout .v-button.active .v-icon, #mainMenuBarCssLayout .v-button:focus .v-icon {
+		color: #c3c3d2;
+	}
+		  			
+	#mainMenuBarCssLayout .v-button:focus:after {
+		content: none;
+	}	
+	
+	#landingSearchPanel {
+		background-color: rgba(255,255,255,.8);
+		border-radius: 3px;
+	}
+	
+   #landingRootLayout {
+   		background-color: rgba(255,255,255,.5);
+   }
+	
+	#landingRootLayout .v-checkbox {
+		vertical-align: middle;
+		
+		//margin-bottom: $v-layout-spacing-vertical;
+		//margin-right: $v-layout-spacing-horizontal;			
+	}
+	
+	#landingSearchCssLayout {
+		display: flex;	
+		align-items: center;
+	
+		//margin-bottom: $v-layout-spacing-vertical;
+		//margin-right: $v-layout-spacing-horizontal;
+		//vertical-align: middle;		
+	}
+	
+	#landingSearchField, #landingSearchButton, #landingSearchButton {
+		//margin-bottom: $v-layout-spacing-vertical;
+		margin-right: $v-layout-spacing-horizontal;
+		//vertical-align: middle;
+		
+		display: flex;	
+		align-items: center;
+	}
+	
+	#landingContentPanel {
+		//background-color: rgba(0,255,255,.8);
+		//display: inline-block;
+		//align-content: center;
+		//justify-content: center;
+	}
+			
+	.borderless {
+		background: transparent;
+		color: inherit;
+		border: none;
+		border-radius: 0;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+
+   #testingRootLayout {
+   		background-color: rgba(255,255,255,.5);
+		padding-top: 20px;
+		padding-right: 20px;
+		padding-bottom: 20px;
+		padding-left: 20px;
+   }	
+   
+   #testingContentPanel {
+	    //margin-top: 20px;
+	    //margin-bottom: 20px;
+	    //margin-right: 20px;
+	    //margin-left: 20px;
+    	    
+   		border-radius: 4px;	
+   		background-color: rgba(255,255,255,.5);
+   }
+  
+}
+
+@include colored;

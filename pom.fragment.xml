@@ -1,0 +1,19 @@
+                <configuration>
+                    <extraJvmArgs>-Xmx1g -Xss1024k</extraJvmArgs>
+
+                    <!-- We are doing "inplace" gwt compilation
+                    but into subdir VAADIN/widgetsets -->
+                    <webappDirectory>src/main/resources/VAADIN/widgetsets
+                    </webappDirectory>
+                    <hostedWebapp>src/main/resources/VAADIN/widgetsets
+                    </hostedWebapp>
+                    <noServer>true</noServer>
+                    <!-- Remove draftCompile when project is ready -->
+                    <draftCompile>true</draftCompile>
+                    <persistentunitcachedir>${project.build.directory}/gwtdirt</persistentunitcachedir>
+                    <compileReport>false</compileReport>
+                    <style>OBF</style>
+                    <strict>true</strict>
+                    <!-- Symbol maps etc, not needed in vaadin app, just target them outside war -->
+                    <deploy>${project.build.directory}/gwt-deploy</deploy>
+                </configuration>     

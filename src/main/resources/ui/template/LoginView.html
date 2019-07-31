@@ -1,0 +1,39 @@
+<!-- :middle :center -->
+<vaadin-vertical-layout _id="loginRootLayout" id="loginRootLayout" responsive size-full margin="false" spacing="false">
+
+  <vaadin-horizontal-layout _id="loginMainLayout" id="loginMainLayout" width-auto :middle :center margin="false" spacing="false">
+  	
+  	<!--  width-auto margin -->
+  	<vaadin-vertical-layout _id="loginInfoLayout" id="loginInfoLayout">
+  	
+  		<vaadin-label plain-text _id="loginLogoLabel" id="loginLogoLabel" />
+  		
+  		<vaadin-label plain-text _id="loginTitleLabel" id="loginTitleLabel">S.S.O.S.</vaadin-label>
+  		
+  		<vaadin-label _id="loginInformationLabel" id="loginInformationLabel">
+  			Welcome to the Single Sign On System. <br />
+  			Please use demo account to login. <br/>
+  		</vaadin-label>
+  		
+  	</vaadin-vertical-layout>
+  	
+	<!--  width-auto margin -->  	  		  	    
+    <vaadin-vertical-layout _id="loginFormLayout" id="loginFormLayout">
+    
+    	<vaadin-label plain-text _id="loginFormSignInLabel" id="loginFormSignInLabel" style-name="v-label-h2">Sign In</vaadin-label>
+    	
+    	<vaadin-label plain-text _id="loginFormLoginLabel" id="loginFormLoginLabel" >Login ID</vaadin-label>
+    	
+    	<vaadin-text-field _id="loginFormLoginTextField" id="loginFormLoginTextField"  />
+    	
+    	<vaadin-label plain-text _id="loginFormPasswordLabel" id="loginFormPasswordLabel" >Password</vaadin-label>
+    	
+    	<vaadin-password-field _id="loginFormPasswordPasswordField" id="loginFormPasswordPasswordField" />
+    	
+    	<vaadin-button _id="loginFormSubmitButton" id="loginFormSubmitButton">Submit</vaadin-button>
+    
+    </vaadin-vertical-layout>    
+    
+  </vaadin-horizontal-layout>
+  
+</vaadin-vertical-layout> 

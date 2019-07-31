@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{dd-MMM-yyyy HH:mm:ss,SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+  
+ 		<Routing name="rollingFile">
+ 			<Routes pattern="$${ctx:logFileName}">
+ 			
+ 				<!-- default, when logFileName is not set -->
+ 				<Route key="${ctx:logFileName}">
+					<RollingFile name="rolling-main" fileName="c:/cds/log/app-main.log"
+						filePattern="c:/cds/log/${date:yyyy-MM}/app-main-%i.log.gz"
+						ImmediateFlush="false" bufferedIO="true" bufferSize="16">
+						<PatternLayout pattern="%d{dd-MMM-yyyy HH:mm:ss,SSS} [%t] %-5level %logger{36} - %msg%n" />
+						<Policies>
+							<SizeBasedTriggeringPolicy size="50 MB" />
+						</Policies>
+						<DefaultRolloverStrategy max="20" />
+					</RollingFile>
+ 				</Route>
+  			
+ 				<!-- when logFileName has been set -->
+ 				<Route>
+					<RollingFile name="rolling-${ctx:logFileName}" fileName="c:/cds/log/app-${ctx:logFileName}.log"
+						filePattern="c:/cds/log/${date:yyyy-MM}/app-${ctx:logFileName}-%d{MM-dd-yyyy}-%i.log.gz"
+						ImmediateFlush="false" bufferedIO="true" bufferSize="16">
+						<PatternLayout pattern="%d{dd-MMM-yyyy HH:mm:ss,SSS} [%t] %-5level %logger{36} - %msg%n" />
+						<Policies>
+							<SizeBasedTriggeringPolicy size="50 MB" />
+						</Policies>
+						<DefaultRolloverStrategy max="20" />
+					</RollingFile>
+ 				</Route>
+
+ 			</Routes>
+ 		</Routing>
+ 		 		
+	</Appenders>
+
+	<Loggers>
+		<Root level="debug">
+			<appender-ref ref="Console" />
+			<appender-ref ref="rollingFile" />
+		</Root>
+		
+		<Logger name="com.crystalreports" level="error" additivity="false">
+			<appender-ref ref="Console" />
+			<appender-ref ref="rollingFile" />
+		</Logger> 
+		<Logger name="com.crystaldecisions" level="error" additivity="false">
+			<appender-ref ref="Console" />
+			<appender-ref ref="rollingFile" />
+		</Logger>
+		<Logger name="com.crystaldecisions.reports.formatter.formatter.lightmodel.cellmodel.FCMCellModel" level="fatal" additivity="false">
+			<appender-ref ref="rollingFile" />
+		</Logger>
+		<Logger name="com.crystaldecisions12" level="error" additivity="false">
+			<appender-ref ref="Console" />
+			<appender-ref ref="rollingFile" />
+		</Logger> 
+		<Logger name="com.businessobjects" level="error" additivity="false">
+			<appender-ref ref="Console" />
+			<appender-ref ref="rollingFile" />
+		</Logger>
+		
+		<Logger name="org.springframework" level="warn" additivity="false">
+			<appender-ref ref="Console" />
+			<appender-ref ref="rollingFile" />
+		</Logger>
+		
+		<Logger name="lc.ifi" level="debug" additivity="false">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="rollingFile"/>
+		</Logger>
+		
+	</Loggers>
+
+</Configuration>
